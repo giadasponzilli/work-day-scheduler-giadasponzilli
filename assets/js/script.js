@@ -23,3 +23,9 @@ Persist events between refreshes of a page */
 
 // Add today's date with dayjs library (day of the week, month, day)
 // Create time blocks with hours in dayjs
+
+const currentDay = $(`#currentDay`)
+
+const todayDate= dayjs().format(`dddd, D MMMM`)
+
+currentDay.append(todayDate)
