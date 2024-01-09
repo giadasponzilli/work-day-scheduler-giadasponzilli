@@ -21,11 +21,35 @@ Save the event in local storage when the save button is clicked in that time blo
 Persist events between refreshes of a page */
 
 
-// Add today's date with dayjs library (day of the week, month, day)
-// Create time blocks with hours in dayjs
+// Add today's date with dayjs library (day of the week, day, month)
 
 const currentDay = $(`#currentDay`)
 
 const todayDate= dayjs().format(`dddd, D MMMM`)
 
 currentDay.append(todayDate)
+
+
+// Create time blocks with hours in dayjs
+
+function createTimeblocks() {
+    
+    const container = $(`.container`)
+
+    for (let i = 9; i <= 17; i++) {
+        const hour = dayjs().hour(i).format(`H`)
+        const timeBlock = $(`<div class= "time-block row" data-i= "${i}">
+            <div class = "col-2 hour">${hour}</div>
+            <textarea class = "col-8 description"></textarea>
+            <button class = "col-2 saveBtn"><i class="fa-solid fa-floppy-disk"></i></i></button>
+        </div>`)
+
+        container.append(timeBlock)
+    }
+    
+    
+}
+
+createTimeblocks()
+
+
