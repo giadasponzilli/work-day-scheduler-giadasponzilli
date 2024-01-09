@@ -55,6 +55,21 @@ createTimeblocks()
 
 
 
+
+// // Allow a user to enter an event when they click a time block
+
+// $(`.saveBtn`).on(`click`, saveEvent)
+
+
+// // Save the event in local storage when the save button is clicked in that time block.
+
+// function saveEvent() {
+//     const textareaE = textarea.val()
+//     localStorage.setItem(,);
+// }
+
+
+
 // Color-code each time block based on past, present, and future when the time block is viewed.
 
 function colorTime() {
