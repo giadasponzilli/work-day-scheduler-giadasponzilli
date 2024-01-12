@@ -6,6 +6,9 @@ The work day scheduler application allows a user to save events for each hour of
 
 This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript. It also use Day.js library to display date and time.
 
+The user can save events for each hour of the working day. When the save button is clicked, the event is stored in local storage and when the page is refreshed the events persist (thanks to `localStorage.getItem` method).
+Furthermore, each time block is colour-coded based on past, present, and future hours when the time block is viewed.
+
 The code is deployed at https://giadasponzilli.github.io/work-day-scheduler-giadasponzilli/
 
 ## Screenshots
