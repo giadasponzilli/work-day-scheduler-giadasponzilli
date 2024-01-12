@@ -21,6 +21,8 @@ Save the event in local storage when the save button is clicked in that time blo
 Persist events between refreshes of a page */
 
 
+
+
 // Add today's date with dayjs library (day of the week, day, month)
 
 const currentDay = $(`#currentDay`)
@@ -30,40 +32,37 @@ const todayDate= dayjs().format(`dddd, D MMMM`)
 currentDay.append(todayDate)
 
 
-// // Allow a user to enter an event when they click a time block
+// Allow a user to enter an event when they click a time block
+// Save the event in local storage when the save button is clicked in that time block. (localStorage.setItem())
 
-// $(`.saveBtn`).on(`click`, saveEvent)
-
-
-// // Save the event in local storage when the save button is clicked in that time block.
-
-// function saveEvent() {
-//     const textareaE = textarea.val()
-//     localStorage.setItem(,);
-// }
+$(`.saveBtn`).on(`click`, function(){
+    const textareaUserInput = $(this).siblings('textarea').val()
+    const userInputHour = $(this).parent().attr("id")
+    localStorage.setItem(userInputHour,textareaUserInput);
+})
 
 
 
 // Color-code each time block based on past, present, and future when the time block is viewed.
 
-function colorTime() {
-    const textAreaTimeColor= $(`.description`)
-    const currentHour = dayjs().hour();
+// function colorTime() {
+//     const textAreaTimeColor= $(`.description`)
+//     const currentHour = dayjs().hour();
 
-    const hourStoredInTimeBlocks = $(this).data(`i`);
+//     const hourStoredInTimeBlocks = $(this).data(`i`);
 
-    $.each(textAreaTimeColor, function() {
-        if (hourStoredInTimeBlocks < currentHour) {
-        textAreaTimeColor.addClass(`past`)
-        }  else if (hourStoredInTimeBlocks === currentHour) {
-        textAreaTimeColor.addClass(`present`)
-        }  else if (hourStoredInTimeBlocks > currentHour) {
-        textAreaTimeColor.addClass(`future`)
-        }
+//     $.each(textAreaTimeColor, function() {
+//         if (hourStoredInTimeBlocks < currentHour) {
+//         textAreaTimeColor.addClass(`past`)
+//         }  else if (hourStoredInTimeBlocks === currentHour) {
+//         textAreaTimeColor.addClass(`present`)
+//         }  else if (hourStoredInTimeBlocks > currentHour) {
+//         textAreaTimeColor.addClass(`future`)
+//         }
 
-        })
+//         })
         
     
-}
+// }
 
-colorTime()
+// colorTime()
