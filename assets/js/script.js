@@ -22,6 +22,7 @@ Persist events between refreshes of a page */
 
 
 
+$(document).ready(function(){
 
 // Add today's date with dayjs library (day of the week, day, month)
 
@@ -57,7 +58,7 @@ const currentHour = dayjs().hour();
 $('.time-block').each(function() {
     
     const hourStoredInTimeBlocks = parseInt($(this).attr(`id`));
-    
+
     if (hourStoredInTimeBlocks < currentHour) {
         $(this).addClass(`past`)
     }  else if (hourStoredInTimeBlocks === currentHour) {
@@ -67,3 +68,5 @@ $('.time-block').each(function() {
     }
 
     })
+
+})
