@@ -30,32 +30,6 @@ const todayDate= dayjs().format(`dddd, D MMMM`)
 currentDay.append(todayDate)
 
 
-// Create time blocks with hours in dayjs
-
-function createTimeblocks() {
-    
-    const container = $(`.container`)
-
-    for (let i = 9; i <= 17; i++) {
-        const timeBlockHour = dayjs().hour(i).format(`H`)
-        const timeBlock = $(`<div class= "time-block row" data-i= "${i}">
-            <div class = "col-2 hour">${timeBlockHour}</div>
-            <textarea class = "col-8 description"></textarea>
-            <button class = "col-2 saveBtn"><i class="fa-solid fa-floppy-disk"></i></i></button>
-        </div>`)
-        
-
-        container.append(timeBlock)
-    }
-    
-    
-}
-
-createTimeblocks()
-
-
-
-
 // // Allow a user to enter an event when they click a time block
 
 // $(`.saveBtn`).on(`click`, saveEvent)
