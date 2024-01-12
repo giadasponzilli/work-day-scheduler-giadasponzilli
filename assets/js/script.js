@@ -42,6 +42,14 @@ $(`.saveBtn`).on(`click`, function(){
 })
 
 
+// Persist events between refreshes of a page (localStorage.getItem())
+for (let i = 9; i <= 17; i++) {
+    
+    $("#" + i +" textarea").val(localStorage.getItem(i))
+    
+}
+
+
 
 // Color-code each time block based on past, present, and future when the time block is viewed.
 
