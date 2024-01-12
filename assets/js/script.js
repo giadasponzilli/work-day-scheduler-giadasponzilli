@@ -50,27 +50,20 @@ for (let i = 9; i <= 17; i++) {
 }
 
 
-
 // Color-code each time block based on past, present, and future when the time block is viewed.
 
-// function colorTime() {
-//     const textAreaTimeColor= $(`.description`)
-//     const currentHour = dayjs().hour();
+const currentHour = dayjs().hour();
 
-//     const hourStoredInTimeBlocks = $(this).data(`i`);
-
-//     $.each(textAreaTimeColor, function() {
-//         if (hourStoredInTimeBlocks < currentHour) {
-//         textAreaTimeColor.addClass(`past`)
-//         }  else if (hourStoredInTimeBlocks === currentHour) {
-//         textAreaTimeColor.addClass(`present`)
-//         }  else if (hourStoredInTimeBlocks > currentHour) {
-//         textAreaTimeColor.addClass(`future`)
-//         }
-
-//         })
-        
+$('.time-block').each(function() {
     
-// }
+    const hourStoredInTimeBlocks = parseInt($(this).attr(`id`));
+    
+    if (hourStoredInTimeBlocks < currentHour) {
+        $(this).addClass(`past`)
+    }  else if (hourStoredInTimeBlocks === currentHour) {
+        $(this).addClass(`present`)
+    }  else if (hourStoredInTimeBlocks > currentHour) {
+        $(this).addClass(`future`)
+    }
 
-// colorTime()
+    })
