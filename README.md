@@ -19,7 +19,7 @@ This code can be installed clicking on the "Code" green button above and git clo
 
 ## Usage
 
-This application can be used by users to save events for their working business hour.
+This application can be used by users to save events for their working business hours.
 
 ## Credits
 N/A
