@@ -27,6 +27,9 @@ MIT License
 
 ## Badges
 
+![Static Badge](https://img.shields.io/badge/53%25-blue?label=HTML&labelColor=green)
+![Static Badge](https://img.shields.io/badge/17%25-blue?label=CSS&labelColor=yellow)
+![Static Badge](https://img.shields.io/badge/30%25-blue?label=JavaScript&labelColor=red)
 
 
 
