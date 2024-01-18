@@ -2,7 +2,7 @@
 
 ## Description
 
-The work day scheduler application allows a user to save events for each hour of the day (standard business hour, 9am-5pm). 
+The work day scheduler application allows a user to save events for each hour of the day (standard business hours, 9am-5pm). 
 
 This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript. It also use Day.js library to display date and time.
 
