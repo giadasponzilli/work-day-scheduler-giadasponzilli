@@ -13,6 +13,10 @@ The code is deployed at https://giadasponzilli.github.io/work-day-scheduler-giad
 
 ## Screenshots
 
+![Alt text](assets/images/Screenshot_workdayscheduler_1.png)
+
+![Alt text](assets/images/Screenshot_workdayscheduler_2.png.png)
+
 ## Installation
 
 This code can be installed clicking on the "Code" green button above and git cloning the SSH to your local terminal.
